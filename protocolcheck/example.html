@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+	<script src="protocolcheck.js"></script>
+    <title>Custom Protocol Demo</title>
+
+</head>
+<body>
+    <h1>Click:</h1>
+	<a href="glcloud://">sssssssssss</a>
+		<a href="mailto://evanxuhe@163.com:">ddddddddddd</a>
+    <a href="JiraUserQuestion:// ">打开用户问题工具</a>
+    
+	<script>
+		//测试本地应用是否存在
+		let protocalUrl = `JiraUserQuestion://open`
+		protocolCheck(protocalUrl, () => {
+			alert('检测到，未安装客户端')
+		}, () => {
+			alert('检测到：已安装了客户端')
+		})
+	</script>
+
+</body>
+</html>

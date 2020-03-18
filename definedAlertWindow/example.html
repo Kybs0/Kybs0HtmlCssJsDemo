@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./example.css" />
+  <script>
+    function Test() {
+      document.getElementById("confirmwindow").style.display = "inline";
+    }
+    function okOnClick(e) {
+      document.getElementById("confirmwindow").style.display = "none";
+    }
+    function cancelOnClick(e) {
+      document.getElementById("confirmwindow").style.display = "none";
+    }
+  </script>
+</head>
+
+<body>
+  <div>
+    <div onclick="Test()">点击测试</div>
+    <!--自定义弹窗-->
+    <div class="confirmWindow" id="confirmwindow">
+      <div class="body">
+        <div class="content">确认要删除XX文件么？</div>
+        <div class="btns">
+          <a href="javascript:void(0);" class="btn-cancel" id="btn_cancel" onClick="cancelOnClick()">取消</a>
+          <a href="javascript:void(0);" class="btn-confirm" id="btn_ok" onClick="okOnClick()">确认</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
